@@ -6,6 +6,7 @@ import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-2.png";
 import Skills from "@/components/Skills";
 import Github from "@/components/Github";
+import Experience from "@/components/Experience";
 
 const About = () => {
   return (
@@ -48,6 +49,7 @@ const About = () => {
           </div>
           <Skills/>
           <Github/>
+          <Experience/>
         </Layout>
       </main>
     </>

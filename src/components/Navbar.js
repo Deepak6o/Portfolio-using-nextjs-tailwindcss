@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
+import { useState,useEffect } from "react";
 import {
   TwitterIcon,
   DribbbleIcon,
@@ -28,8 +29,22 @@ const CustomLink = ({ href, title, className = "" }) => {
 };
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isTop = currentScrollPos < 100; // Change the scroll threshold as needed
+      setIsScrolled(!isTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header className={`w-full px-32 py-8 font-medium flex items-center justify-between ${isScrolled ? 'bg-opacity-90 backdrop-filter backdrop-blur-lg' : ''} sticky top-0 z-50 transition duration-300 ease-in-out`}>
+
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
