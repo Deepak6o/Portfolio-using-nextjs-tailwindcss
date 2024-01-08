@@ -24,17 +24,19 @@ every project I work on. I look forward to the opportunity to bring my skills an
 
 EXPERIENCE: 
 
-Software Engineer @Google
-2022-Present | Mountain View, CA
-Worked on a team responsible for developing new features for Google's 
-search engine, including improving the accuracy and relevance of search results and 
-developing new tools for data analysis and visualization.
+Web Development Intern @Kamav Technologies
+10/2022-12/2022 
+Created a responsive Educational e-commerce website with full functionality and user adaptability. The site supports
+seamless interaction for educational purchases across various devices.
+Skills Used- HTML5, CSS, Tailwind CSS, Bootstrap, JavaScript
+Tools Used- Figma, Canva.
 
 Intern @Facebook
 Summer 2021 | Menlo Park, CA.
-Worked on a team responsible for developing a new mobile app feature that allowed users to create and 
-share short-form video content, including designing and implementing a new user interface and developing 
-the backend infrastructure to support the feature.
+WedevelopedanE-commerceClothes Website utilizing ReactJs, ensuring an intuitive user interface. It offers a seam
+less shopping experience with a focus on usability and performance.
+Skills Used- ReactJs, Redux Toolkit, Tailwind CSS, React-Router DOM, JavaScript, HTML5.
+Tools Used- Figma
 
 Software Developer @Amazon
 2020-2021 | Seattle, WA.
