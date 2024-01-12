@@ -12,34 +12,52 @@ import project4 from "../../public/images/projects/todo.png";
 import project5 from "../../public/images/projects/weather.png";
 import project6 from "../../public/images/projects/nike.png";
 
-
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-6 transition duration-300 transform hover:scale-105">
-  <Link href={link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
-    <Image src={img} alt={title} className="w-full h-auto rounded-lg" />
-  </Link>
-  <div className="w-1/2 flex flex-col items-start justify-between p-6">
-    <span className="text-primary font-medium text-xl">{type}</span>
-    <Link href={link} target="_blank" className="hover:underline underline-offset-2">
-      <h2 className="my-2 w-full text-left text-4xl font-bold text-dark">{title}</h2>
-    </Link>
-    <p className="my-2 text-sm text-gray-700">{summary}</p>
-    <div className="mt-4 flex items-center">
-      <Link href={github} target="_blank" className="w-8">
-        <GithubIcon />
-      </Link>
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark dark:border-light bg-light dark:bg-dark shadow-2xl p-6 transition duration-300 transform hover:scale-105">
       <Link
-        href={github}
+        href={link}
         target="_blank"
-        className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark transition duration-300"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        Visit Project
+        <Image
+          src={img}
+          alt={title}
+          className="w-full h-auto rounded-lg"
+          priority
+          sizes="(max-width:768) 100vw,
+              (max-width:1200px) 50vw,
+              33vw"
+        />
       </Link>
-    </div>
-  </div>
-</article>
-
+      <div className="w-1/2 flex flex-col items-start justify-between p-6">
+        <span className="text-primary dark:text-primaryDark font-medium text-xl">
+          {type}
+        </span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline  underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold text-dark dark:text-light">
+            {title}
+          </h2>
+        </Link>
+        <p className="my-2 text-sm text-gray-700 dark:text-light">{summary}</p>
+        <div className="mt-4 flex items-center">
+          <Link href={github} target="_blank" className="w-8">
+            <GithubIcon />
+          </Link>
+          <Link
+            href={github}
+            target="_blank"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark transition duration-300 dark:bg-light dark:text-dark"
+          >
+            Visit Project
+          </Link>
+        </div>
+      </div>
+    </article>
   );
 };
 
@@ -50,7 +68,7 @@ const projects = () => {
         <title>Projects Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <div className="mb-16">
             <AnimatedText text="My Recent Works" />
@@ -126,7 +144,6 @@ tend technologies. Tech. used: React, CSS, JavaScript, HTML5, Framer Motion"
               />
             </div>
           </div>
-          
         </Layout>
       </main>
     </>
