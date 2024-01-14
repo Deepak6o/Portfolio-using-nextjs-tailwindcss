@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import Github from "@/components/Github";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Transition from "@/components/Transition";
 
 const About = () => {
   return (
@@ -16,11 +17,12 @@ const About = () => {
         <title>About Page</title>
         <meta name="description" content="any description" />
       </Head>
+      <Transition/>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="Know Who I'M" className="mb-16" />
-          <div className="grid w-full grid-cols-8 gap-16">
-            <div className="col-span-4 flex flex-col items-start justify-start">
+          <AnimatedText text="Know Who I'M" className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8" />
+          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 md:flex md:flex-col-reverse">
+            <div className="col-span-4 flex flex-col items-start justify-start xl-col-span-4">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 About Me...
               </h2>
@@ -44,7 +46,7 @@ const About = () => {
                 and concepts, translating them into captivating digital spaces.
               </p>
             </div>
-            <div className="col-span-4 relative h-max ">
+            <div className="col-span-4 relative h-max xl-col-span-4">
               <Image
                 src={profilePic}
                 alt=""

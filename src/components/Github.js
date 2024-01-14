@@ -12,7 +12,7 @@ function Github() {
 
   return (
     <Row className=" py-8 px-4 rounded">
-      <h2 className="font-bold text-8xl mt-20 mb-10 w-full text-center">Days I Code</h2>
+      <h2 className="font-bold text-8xl mt-20 mb-10 w-full text-center md:text-6xl xs:text-4xl md:mb-16">Days I Code</h2>
 
       <div className="text-center font-semibold">
         <GitHubCalendar
