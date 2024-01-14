@@ -18,18 +18,18 @@ const About = () => {
         <meta name="description" content="any description" />
       </Head>
       <Transition/>
-      <main className="flex w-full flex-col items-center justify-center dark:text-light">
+      <main className="flex flex-col items-center justify-center w-full dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Know Who I'M" className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8" />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 md:flex md:flex-col-reverse">
-            <div className="col-span-4 flex flex-col items-start justify-start xl-col-span-4">
+            <div className="flex flex-col items-start justify-start col-span-4 xl-col-span-4">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 About Me...
               </h2>
               <p className="font-medium">
-                Hello there! I'm Deepak Kumar, a passionate individual hailing
+                Hello there! I am Deepak Kumar, a passionate individual hailing
                 from the beautiful state of Bihar, India. Currently, I am
-                immersed in the world of technology, pursuing a Bachelor's
+                immersed in the world of technology, pursuing a Bachelor
                 degree in Computer Science Engineering.
               </p>
               <p className="my-4 font-medium">
@@ -46,11 +46,11 @@ const About = () => {
                 and concepts, translating them into captivating digital spaces.
               </p>
             </div>
-            <div className="col-span-4 relative h-max xl-col-span-4">
+            <div className="relative col-span-4 h-max xl-col-span-4">
               <Image
                 src={profilePic}
                 alt=""
-                className="w-full shadow-md bg-white"
+                className="w-full bg-white shadow-md"
                 priority
                 sizes="(max-width:768) 100vw,
               (max-width:1200px) 50vw,
